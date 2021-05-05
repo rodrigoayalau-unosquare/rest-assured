@@ -5,8 +5,8 @@
     <classes>
       <class name="nasa.NasaAPI">
         <methods>
+          <include name="getResponse200"/>
           <include name="setUp"/>
-          <include name="firstTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- nasa.NasaAPI -->

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5211" started-at="2021-05-04T23:01:42Z" finished-at="2021-05-04T23:01:48Z">
+  <suite name="Default suite" duration-ms="6008" started-at="2021-05-05T12:59:44Z" finished-at="2021-05-05T12:59:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5211" started-at="2021-05-04T23:01:42Z" finished-at="2021-05-04T23:01:48Z">
+    <test name="Default test" duration-ms="6008" started-at="2021-05-05T12:59:44Z" finished-at="2021-05-05T12:59:50Z">
       <class name="nasa.NasaAPI">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="setUp" is-config="true" duration-ms="23" started-at="2021-05-04T18:01:42Z" finished-at="2021-05-04T18:01:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="setUp" is-config="true" duration-ms="920" started-at="2021-05-05T07:59:44Z" finished-at="2021-05-05T07:59:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="firstTest()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="firstTest" duration-ms="5149" started-at="2021-05-04T18:01:42Z" finished-at="2021-05-04T18:01:47Z">
+        <test-method status="PASS" signature="getResponse200()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="getResponse200" duration-ms="3737" started-at="2021-05-05T07:59:45Z" finished-at="2021-05-05T07:59:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firstTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-05-04T18:01:47Z" finished-at="2021-05-04T18:01:48Z">
+        </test-method> <!-- getResponse200 -->
+        <test-method status="PASS" signature="getResponseDeserialization()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="getResponseDeserialization" duration-ms="1314" started-at="2021-05-05T07:59:49Z" finished-at="2021-05-05T07:59:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResponseDeserialization -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:nasa.NasaAPI@769f71a9]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-05-05T07:59:50Z" finished-at="2021-05-05T07:59:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
