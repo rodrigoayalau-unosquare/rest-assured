@@ -30,8 +30,10 @@ import java.util.List;
 
 public class NasaAPITest {
 	JsonObject jo = new JsonObject();
+	String key;
 	
 	
+	// URL declared and Serialization.
 	@BeforeClass
 	public void setUp() {
 		RestAssured.baseURI = "https://api.nasa.gov";
@@ -41,13 +43,14 @@ public class NasaAPITest {
 		methods.add("post");
 		methods.add("get");
 		jo.setMethods(methods);
-		System.out.println();
-		
+		key = jo.getApi_key();
 	}
 	
+	// 200 verification test
 	@Test
 	public void getResponse200() {
-		String response = given().log().all().queryParam("api_key", jo.getApi_key()).header("Content-Type", "application/json")
+		System.out.println(key);
+		String response = given().log().all().queryParam("api_key", key).header("Content-Type", "application/json")
 		.when().get("planetary/apod")
 		.then().assertThat().statusCode(200).body("date", equalTo("2021-05-05")).extract().response().asString();
 		
@@ -61,6 +64,8 @@ public class NasaAPITest {
 		
 	}
 	
+	
+	// Deserialization for the response
 	@Test
 	public void getResponseDeserialization() {
 		RestAssured.baseURI = "https://api.nasa.gov";
@@ -77,11 +82,7 @@ public class NasaAPITest {
 		System.out.println(nasajson.getTitle());
 		System.out.println(nasajson.getUrl());
 	}
-	
-	@Test
-	public void setSerialization() {
-		
-	}
+
 	
 	@AfterClass
 	public void tearDown() {
