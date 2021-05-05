@@ -1,10 +1,12 @@
 package utils;
 
+import java.util.List;
+
 public class JsonObject {
 	
 	private String url;
 	private String api_key;
-	private Methods methods;
+	private List<String> methods;
 	
 	
 	public String getUrl() {
@@ -19,10 +21,10 @@ public class JsonObject {
 	public void setApi_key(String api_key) {
 		this.api_key = api_key;
 	}
-	public Methods getMethods() {
+	public List<String> getMethods() {
 		return methods;
 	}
-	public void setMethods(Methods methods) {
+	public void setMethods(List<String> methods) {
 		this.methods = methods;
 	}
 	
