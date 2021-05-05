@@ -1,8 +1,8 @@
 {
-    "URL": "https://api.nasa.gov/",
-    "API_KEY": "Rgr0tol175zyNjjLahTVwJB7oPKJSyqbpBIpcxcI",
-    "METHODS": {
-        "POST": "post",
-        "GET": "get"
+    "url": "https://api.nasa.gov/",
+    "api_key": "Rgr0tol175zyNjjLahTVwJB7oPKJSyqbpBIpcxcI",
+    "methods": {
+        "post": "post",
+        "get": "get"
     }
 }

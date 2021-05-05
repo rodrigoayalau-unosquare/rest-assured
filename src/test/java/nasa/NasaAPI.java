@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import utils.JsonObject;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -20,7 +21,7 @@ import static org.hamcrest.Matchers.*;
 			URL
 			API key
 			Method (POST, GET, ETC)
-	Validate that the response was a success and response body has values
+	Validate that the response was a success and response body has values - OK
 	Right now we are not going to validate data on the body.
 	URL = https://api.nasa.gov/planetary/apod?api_key=I2DHqYUo4PAJsFsidZba3aCDpWJMsR9a3BcJLFae 
  */
@@ -29,7 +30,10 @@ public class NasaAPI {
 	
 	@BeforeClass
 	public void setUp() {
-		
+			JsonObject jo = new JsonObject();
+			jo.setUrl("https://api.nasa.gov");
+			jo.setApi_key("Rgr0tol175zyNjjLahTVwJB7oPKJSyqbpBIpcxcI");
+			
 	}
 	
 	@Test
