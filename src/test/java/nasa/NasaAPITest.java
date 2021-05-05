@@ -30,28 +30,32 @@ import java.util.List;
 
 public class NasaAPITest {
 	JsonObject jo = new JsonObject();
+	String base_url;
+	String url;
 	String key;
 	
 	
 	// URL declared and Serialization.
 	@BeforeClass
 	public void setUp() {
-		RestAssured.baseURI = "https://api.nasa.gov";
-		jo.setUrl("https://api.nasa.gov");
+		jo.setBase_url("https://api.nasa.gov");
+		jo.setUrl("planetary/apod");
 		jo.setApi_key("Rgr0tol175zyNjjLahTVwJB7oPKJSyqbpBIpcxcI");
 		List<String> methods = new ArrayList<String>();
 		methods.add("post");
 		methods.add("get");
 		jo.setMethods(methods);
+		base_url = jo.getBase_url();
+		url = jo.getUrl();
 		key = jo.getApi_key();
+		RestAssured.baseURI = base_url;
 	}
 	
 	// 200 verification test
 	@Test
 	public void getResponse200() {
-		System.out.println(key);
 		String response = given().log().all().queryParam("api_key", key).header("Content-Type", "application/json")
-		.when().get("planetary/apod")
+		.when().get(url)
 		.then().assertThat().statusCode(200).body("date", equalTo("2021-05-05")).extract().response().asString();
 		
 		System.out.println("The response is empty? " + response.isEmpty());
